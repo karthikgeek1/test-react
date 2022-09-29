@@ -14,7 +14,7 @@ const App = () => {
   useEffect(() => {
     const FilteredData = posts.filter((post) => {
       if (post.name) {
-        return post.name.includes(val);
+        return post.name.includes(val.toLowerCase());
       }
     });
     setResult([...FilteredData]);
